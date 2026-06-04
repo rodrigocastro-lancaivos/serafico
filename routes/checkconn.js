@@ -11,3 +11,5 @@ router.get('/', async function(req, res) {
     await run(client)
     res.send("Rodou")
 });
+
+module.exports = router;
