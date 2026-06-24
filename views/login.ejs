@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh; gap: 10px">
+
+    <img src="images/logoCoroinhas.png" alt="Imagem logo dos Coroinhas" style="width: 110px; height: auto;">
+
+    <form class="w-100 bg-light rounded-4 p-5" style="max-width: 500px;">
+        <div class="mb-3">
+            <label for="emailUsuario" class="form-label">Endereço de Email</label>
+            <input type="email" class="form-control" id="emailUsuario" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Nós não compartilharemos seu email com ninguém.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="senhaUsuario" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senhaUsuario">
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="lembrarCheck">
+            <label class="form-check-label" for="lembrarCheck">Lembrar de mim</label>
+        </div>
+
+        <button type="submit" class="mb-3 btn btn-primary w-100">Login</button>
+
+        <div class="text-end">
+            <a href="/register">Criar conta</a>
+        </div>
+
+    </form>
+
+</div>
+
+<% include partials/footer %>

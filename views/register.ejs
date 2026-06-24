@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+
+<div class="d-flex container-fluid justify-content-center align-items-center" style="min-height: 100vh; gap: 10px">
+
+    <form class="w-100 bg-light rounded-4 p-5" style="max-width: 500px;">
+        <div class="mb-3">
+            <label for="nomeUsuario" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nomeUsuario">
+        </div>
+        
+        <div class="mb-3">
+            <label for="emailUsuario" class="form-label">Endereço de Email</label>
+            <input type="email" class="form-control" id="emailUsuario">
+        </div>
+
+        <div class="mb-3">
+            <label for="senhaUsuario" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senhaUsuario">
+        </div>
+
+        <div class="mb-3">
+            <label for="confirmarSenhaUsuario" class="form-label">Confirmar Senha</label>
+            <input type="password" class="form-control" id="confirmarSenhaUsuario">
+        </div>
+
+        <!-- <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="lembrarCheck">
+            <label class="form-check-label" for="lembrarCheck">Lembrar de mim</label>
+        </div> -->
+
+        <button type="submit" class="mb-3 btn btn-primary w-100">Cadastrar</button>
+
+        <div class="text-end">
+            <a href="/">Voltar</a>
+        </div>
+
+    </form>
+
+</div>
+
+<% include partials/footer %>
