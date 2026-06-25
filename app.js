@@ -22,6 +22,7 @@ var escalaRouter = require('./routes/escala')
 var configuracoesRouter = require('./routes/configuracoes')
 var coroinhasRouter = require('./routes/coroinhas')
 var addRouter = require('./routes/add')
+var addControllerRouter = require('./routes/addController')
 
 var app = express();
 
@@ -53,6 +54,7 @@ app.use('/escala', escalaRouter)
 app.use('/configuracoes', configuracoesRouter)
 app.use('/coroinhas', coroinhasRouter)
 app.use('/add', addRouter)
+app.use('/addController', addControllerRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
