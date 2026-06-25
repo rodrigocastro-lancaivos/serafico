@@ -2,12 +2,12 @@
 
 <div class="d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh; gap: 10px">
 
-    <img src="images/logoCoroinhas.png" alt="Imagem logo dos Coroinhas" style="width: 110px; height: auto;">
+    <!-- <img src="images/logoCoroinhas.png" alt="Imagem logo dos Coroinhas" style="width: 110px; height: auto;"> -->
 
-    <form class="w-100 bg-light rounded-4 p-5" style="max-width: 500px; box-shadow: 0px 4px 5px rgba(0,0,0,0.1);">
+    <form action="/logar" method="POST" class="w-100 bg-light rounded-4 p-5" style="max-width: 500px; box-shadow: 0px 4px 5px rgba(0,0,0,0.1);">
         <div class="mb-3">
             <label for="emailUsuario" class="form-label">Endereço de Email</label>
-            <input type="email" class="form-control" id="emailUsuario">
+            <input type="email" name="email" class="form-control" id="emailUsuario">
             <div id="emailHelp" class="form-text">Nós não compartilharemos seu email com ninguém.</div>
         </div>
 
@@ -15,7 +15,7 @@
             <label for="senhaUsuario" class="form-label">Senha</label>
 
             <div class="position-relative">
-                <input type="password" class="form-control" id="senhaUsuario">
+                <input type="password" name="senha" class="form-control" id="senhaUsuario">
                 <i id="togglePassword" class="fas fa-eye position-absolute top-50 end-0 translate-middle-y me-3" style="cursor: pointer;"></i>
             </div>
         </div>
