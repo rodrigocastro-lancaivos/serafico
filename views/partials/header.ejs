@@ -19,16 +19,33 @@
     <div class="container-fluid">
       <div class="row vh-100">
 
-        <aside class="col-2 d-flex flex-column align-items-center" style="background-color: rgba(0, 11, 71, 0.836);">
-          <!-- Navbar Lateral -->
-          <nav class="sidebar">
-            <img src="images/logoCoroinhas.png" alt="Imagem logo dos Coroinhas" style="width: 110px; height: auto;">
-            <h3 class="">Coroinhas APNSDB</h3>
-            <small class="text-secondary">Área Pastoral Nossa Senhora do Brasil</small>
+        <aside class="col-2 d-flex flex-column align-items-center" style="background-color: rgb(24, 34, 88);">
 
-            <a href="">Home</a>
-            <a href="">Users</a>
-          </nav>
-        </aside>
+  <nav class="sidebar d-flex flex-column align-items-center">
+
+    <img src="images/logoCoroinhasReduzida.png" 
+         alt="Imagem logo dos Coroinhas" 
+         class="mt-5 mb-1"
+         style="width: 110px; height: auto;">
+
+    <h3 style="color: rgb(235, 235, 235);">Coroinhas APNSDB</h3>
+
+    <small style="color: #d6d6d6;" class="text-center mb-5">
+      Área Pastoral Nossa Senhora do Brasil
+    </small>
+
+    <a href="/home" class="btn <%= paginaAtiva === 'home' ? 'btn-danger' : 'btn-outline-light' %> w-100 mb-4">Início</a>
+    <a href="/coroinhas" class="btn <%= paginaAtiva === 'coroinhas' ? 'btn-danger' : 'btn-outline-light' %> w-100 mb-4">Coroinhas</a>
+    <a href="/escala" class="btn <%= paginaAtiva === 'escala' ? 'btn-danger' : 'btn-outline-light' %> w-100 mb-4">Escala</a>
+    <a href="/configuracoes" class="btn <%= paginaAtiva === 'configuracoes' ? 'btn-danger' : 'btn-outline-light' %> w-100 mb-4">Configurações</a>
+
+    <a href="/users" class="<%= paginaAtiva === 'sair' ? 'btn btn-danger' : 'btn btn-outline-light' %> w-100 mb-4">
+      <%= perfil ? perfil : 'Perfil' %>
+    </a>
+
+
+  </nav>
+
+</aside>
 
         <main class="col-10 d-flex justify-content-center align-items-center">

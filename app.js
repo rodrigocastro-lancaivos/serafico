@@ -18,7 +18,6 @@ var registerRouter = require('./routes/register')
 var forgetPasswordRouter = require('./routes/forgetPassword')
 var logarRouter = require('./routes/logar')
 var registrarRouter = require('./routes/registrar');
-const { error } = require('console');
 
 var app = express();
 
@@ -31,6 +30,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use((req, res, next) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.render('inicializando', {paginaAtiva: 'none'});
+  }
+  next();
+});
 
 app.use('/', loginRouter);
 app.use('/users', usersRouter);
