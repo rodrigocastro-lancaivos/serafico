@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   
-  res.render('configuracoes', {paginaAtiva: "configuracoes", perfil: ""});
+  res.render('adding', {paginaAtiva: "", perfil: ""});
 });
 
 module.exports = router;

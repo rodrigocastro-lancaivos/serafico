@@ -1,0 +1,146 @@
+<% include partials/header %>
+
+
+<form action="/addController" method="POST" class="w-100 bg-light rounded-4 p-5" style="max-width: 600px; box-shadow: 0px 4px 5px rgba(0,0,0,0.1);">
+
+
+    <h2 class="mb-4 text-center">
+        Cadastro de Coroinha
+    </h2>
+
+
+    <div class="mb-3">
+
+        <label for="nomeCoroinha" class="form-label">
+            Nome completo
+        </label>
+
+        <input 
+            type="text" 
+            name="nome"
+            class="form-control" 
+            id="nomeCoroinha"
+            required>
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label for="dataNascimento" class="form-label">
+            Data de nascimento
+        </label>
+
+        <input 
+            type="date" 
+            name="dataNascimento"
+            class="form-control"
+            id="dataNascimento"
+            required>
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label for="telefone" class="form-label">
+            Telefone
+        </label>
+
+        <input 
+            type="tel"
+            name="telefone"
+            class="form-control"
+            id="telefone">
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label for="responsavel" class="form-label">
+            Responsável
+        </label>
+
+        <input 
+            type="text"
+            name="responsavel"
+            class="form-control"
+            id="responsavel"
+            required>
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label for="emailResponsavel" class="form-label">
+            Email do responsável
+        </label>
+
+        <input 
+            type="email"
+            name="emailResponsavel"
+            class="form-control"
+            id="emailResponsavel">
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label for="nivel" class="form-label">
+            Nível
+        </label>
+
+        <select 
+            name="nivel"
+            class="form-select"
+            id="nivel">
+
+            <option value="Novato">
+                Novato
+            </option>
+
+            <option value="Experiente">
+                Experiente
+            </option>
+
+            <option value="Formador">
+                Formador
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="mb-3">
+
+        <label for="observacoes" class="form-label">
+            Observações
+        </label>
+
+        <textarea
+            name="observacoes"
+            class="form-control"
+            id="observacoes"
+            rows="3">
+        </textarea>
+
+    </div>
+
+
+    <button 
+        type="submit"
+        class="btn btn-primary w-100 mt-3">
+
+        Cadastrar Coroinha
+
+    </button>
+
+
+</form>
+
+
+<% include partials/footer %>

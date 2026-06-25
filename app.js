@@ -16,8 +16,12 @@ var homeRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
 var registerRouter = require('./routes/register')
 var forgetPasswordRouter = require('./routes/forgetPassword')
-var logarRouter = require('./routes/logar')
-var registrarRouter = require('./routes/registrar');
+var logarRouter = require('./routes/loginController')
+var registrarRouter = require('./routes/registerController');
+var escalaRouter = require('./routes/escala')
+var configuracoesRouter = require('./routes/configuracoes')
+var coroinhasRouter = require('./routes/coroinhas')
+var addRouter = require('./routes/add')
 
 var app = express();
 
@@ -45,6 +49,10 @@ app.use('/register', registerRouter)
 app.use('/forgetPassword', forgetPasswordRouter)
 app.use('/logar', logarRouter)
 app.use('/registrar', registrarRouter)
+app.use('/escala', escalaRouter)
+app.use('/configuracoes', configuracoesRouter)
+app.use('/coroinhas', coroinhasRouter)
+app.use('/add', addRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
